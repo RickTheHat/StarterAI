@@ -114,6 +114,9 @@ adopting it. The brief can override any of them with a recorded approval.
 - User accounts when the product needs them; passwordless six-digit email
   codes through ASP.NET Core Identity are the default authentication
   approach when suitable.
+- For local email development, use a mail catcher such as Mailpit rather
+  than a real mail server. Mailpit's default inbox is
+  `http://localhost:8025` and its SMTP listener is `localhost:1025`.
 - Server-rendered, classless HTML and minimal client-side JavaScript. One
   minified, replaceable stylesheet (reset first, then a variable-driven
   theme) in the style of CSS Zen Garden: mobile first, accessible,

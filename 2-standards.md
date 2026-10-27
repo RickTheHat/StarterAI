@@ -135,10 +135,13 @@ email with verification; account deletion with what is kept and erased;
 data export before deletion; admin disable or suspend; inactive accounts.
 
 **Local email (if OTP):** send to a local mail catcher such as Mailpit or
-smtp4dev on its default SMTP port, never to a real mail server. Show the
-code in the login page only in the local Development environment. In
-development, any valid email may register. In production, never return the
-code in HTML, API responses, or logs, and test that this can't be enabled.
+smtp4dev on its default SMTP port, never to a real mail server. With
+Mailpit, the default web inbox is `http://localhost:8025` and the SMTP
+listener is `localhost:1025`; use the equivalent documented ports for
+smtp4dev. Show the code in the login page only in the local Development
+environment. In development, any valid email may register. In production,
+never return the code in HTML, API responses, or logs, and test that this
+can't be enabled.
 
 **Production email (if email is sent):** record the provider, keep
 credentials out of source, configure SPF, DKIM, and DMARC with a dedicated
