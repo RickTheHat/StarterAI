@@ -1,0 +1,37 @@
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Keep private working briefs out of the public repository.
+examples/
+
+# Build and test output.
+bin/
+obj/
+artifacts/
+TestResults/
+coverage/
+node_modules/
+
+# Local databases and SQLite sidecar files.
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Local environment and secret material.
+.env
+.env.*
+!.env.example
+secrets.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Local IDE state.
+*.user
+*.suo
