@@ -3,8 +3,9 @@
 .vscode/
 .idea/
 
-# Keep private working briefs out of the public repository.
-examples/
+# Only the published sample brief is tracked under examples/.
+examples/*
+!examples/example-brief.md
 
 # Build and test output.
 bin/

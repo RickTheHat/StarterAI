@@ -1,26 +1,32 @@
 # StarterAI
 
-A reusable kit for starting website projects with an AI coding agent. It
-provides operating instructions, recommended technical and quality
-defaults, and a brief template that the human makes project-specific.
+An opinionated kit for starting ASP.NET Core website projects with an AI
+coding agent. It provides operating instructions for the agent,
+recommended technical and quality defaults, and a brief template that
+the human makes project-specific.
 
-## What is in this folder
+The operating instructions are provider-neutral and work with any agent
+that can read Markdown. The technical defaults are specific: ASP.NET Core
+MVC, SQLite, ASP.NET Core Identity, Datastar, Serilog, xUnit v3,
+Playwright, and Verify. They reflect the author's preferences, and a
+completed brief can override any of them with a recorded approval.
+
+## What is in this repository
 
 | File | Purpose | Changes per project? |
 |------|---------|----------------------|
 | [1-director.md](./1-director.md) | How the agent works with you: discovery, delegation, verification, authority limits, communication, and definition of done. | No |
 | [2-standards.md](./2-standards.md) | Recommended technical, security, privacy, quality, and deployment defaults. Apply relevant sections; exceptions require explicit human approval. | No |
 | [3-brief.md](./3-brief.md) | Blank project brief template. A human must replace its prompts with a specific project brief before kickoff. | **Yes, every project** |
+| [examples/example-brief.md](./examples/example-brief.md) | A completed sample brief for a fictional project, showing what a kickoff-ready `3-brief.md` looks like. | Reference only |
 | [SECURITY.md](./SECURITY.md) | How to report security issues privately and what this policy covers. | No |
+| [CONTRIBUTING.md](./CONTRIBUTING.md) | Ground rules for proposing changes to the kit. | No |
+| [LICENSE](./LICENSE) | MIT License. | No |
 
-## Private working briefs
+## Precedence
 
-The local `examples/` directory is intentionally ignored by Git and is not
-part of the public release. Keep private briefs there for local reference;
-do not rely on those files being available to users of the public kit.
-
-Precedence when documents conflict: explicit instructions from the human in
-chat, then the human-completed `3-brief.md`, then `2-standards.md`, then
+When documents conflict: explicit instructions from the human in chat,
+then the human-completed `3-brief.md`, then `2-standards.md`, then
 `1-director.md`. A project may use an exception to a standard only when the
 brief names the exception and records the human's approval. The agent must
 report conflicts and ask before deviating.
@@ -32,9 +38,9 @@ report conflicts and ask before deviating.
 3. **Before kickoff, a human must replace the prompts in `3-brief.md` with
    the project's goals, scope, decisions, and acceptance criteria.** Mark
    irrelevant items as not applicable; do not leave template prompts in the
-   active brief. The agent may help clarify
-   decisions after kickoff, but must not begin project work until the human
-   brief is project-specific and approved.
+   active brief. See `examples/example-brief.md` for a completed sample.
+   The agent may help clarify decisions after kickoff, but must not begin
+   project work until the human brief is project-specific and approved.
 4. Give the agent all three files together, for example:
 
    > Read 1-director.md, 2-standards.md, and 3-brief.md. Follow
@@ -96,8 +102,10 @@ starter folder.
 ## Recommended defaults
 
 Use these when they fit the project; they are not universal requirements.
-The agent must explain a material mismatch, recommend an alternative, and
-wait for your approval before adopting it.
+They are the author's preferences, chosen for small, secure, long-lived
+sites maintained by one person. The agent must explain a material
+mismatch, recommend an alternative, and wait for your approval before
+adopting it. The brief can override any of them with a recorded approval.
 
 - ASP.NET Core MVC with Razor views; recommend another rendering model
   only when the project needs it and the human approves the change.
@@ -109,7 +117,8 @@ wait for your approval before adopting it.
 - Server-rendered, classless HTML and minimal client-side JavaScript. One
   minified, replaceable stylesheet (reset first, then a variable-driven
   theme) in the style of CSS Zen Garden: mobile first, accessible,
-  responsive, dark futuristic default, Monaco at 23px. Datastar is the
+  responsive, dark futuristic default, monospace type with a large 23px
+  base size for readability. Datastar is the
   preferred enhancement in the current stack; custom JavaScript, frontend
   frameworks, and third-party scripts require approval.
 - Serilog for ASP.NET Core application logging.

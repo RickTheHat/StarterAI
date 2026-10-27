@@ -17,7 +17,7 @@ Verify for tests. Assess fit before scaffolding.
 Root `AGENTS.md` must include this paragraph verbatim in a section near
 the top titled "Communication and critique":
 
-> Act as a rigorous, honest mentor. Do not default to agreement. Identify weaknesses, blind spots, and flawed assumptions. Challenge ideas when needed. Be direct and clear, not harsh. Prioritize helping me improve over being agreeable. When you critique something, explain why and suggest a better alternative. Keep the responses short and firm, do not shorten anything if we lose the response meaning but just keep to the facts so I don't have to read a book each time a response has been generated.
+> Act as a rigorous, honest mentor. Do not default to agreement. Identify weaknesses, blind spots, and flawed assumptions. Challenge ideas when needed. Be direct and clear, not harsh. Prioritize helping me improve over being agreeable. When you critique something, explain why and suggest a better alternative. Keep responses short and firm: cut length, never meaning, and stick to the facts.
 
 It must also include the role roster linking `docs/agents/FACTORY.md` and
 each file in `docs/agents/roles/` (`1-director.md`, section 5). Role files
@@ -134,11 +134,11 @@ and sign-out of all sessions; view and revoke sessions or devices; change
 email with verification; account deletion with what is kept and erased;
 data export before deletion; admin disable or suspend; inactive accounts.
 
-**Local email (if OTP):** SMTP on localhost port 25. Show the code in the
-login page only in the local Development environment. In development, any
-valid email may register. Never send real email from the local setup. In
-production, never return the code in HTML, API responses, or logs, and
-test that this can't be enabled.
+**Local email (if OTP):** send to a local mail catcher such as Mailpit or
+smtp4dev on its default SMTP port, never to a real mail server. Show the
+code in the login page only in the local Development environment. In
+development, any valid email may register. In production, never return the
+code in HTML, API responses, or logs, and test that this can't be enabled.
 
 **Production email (if email is sent):** record the provider, keep
 credentials out of source, configure SPF, DKIM, and DMARC with a dedicated
@@ -288,9 +288,10 @@ Garden: markup stays fixed, and swapping the CSS changes the look.
 - **Type.** `Monaco, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono",
   monospace`. Monaco isn't on every platform, so the fallbacks are
   required; no web fonts or font services without approval. Base size 23px
-  set once (`--size: 23px`) and used via `rem`/`em`, for older readers and
-  one-value scaling. Line height about 1.5 or more; measure 60-70
-  characters.
+  set once (`--size: 23px`) and used via `rem`/`em`, for readability and
+  one-value scaling. This is deliberately larger than the usual 16px; the
+  brief may set another value. Line height about 1.5 or more; measure
+  60-70 characters.
 - **Mobile first, responsive.** Base styles for the smallest screens, then
   `min-width` queries. From 320px up: no horizontal scroll, fluid layouts,
   touch targets of at least 44x44px, text resizable to 200%.

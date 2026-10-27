@@ -7,24 +7,18 @@ should be sent to that application's maintainers instead.
 
 ## Supported versions
 
-The following versions receive security fixes:
-
-| Version | Supported |
-| --- | --- |
-| `main` | Yes |
-| Latest tagged release | Yes |
-| Older releases | Best effort only |
+Only the current `main` branch receives fixes. There are no versioned
+releases.
 
 ## Reporting a vulnerability
 
 Please do not open a public issue or pull request for a suspected
 vulnerability.
 
-If this repository is hosted on GitHub, use the repository's private
-vulnerability reporting feature from the **Security** tab. If private
-reporting is not available, contact the maintainer through the private
-contact method listed in the repository profile. Do not include secrets,
-credentials, private briefs, or unnecessary personal data in a report.
+Use the repository's private vulnerability reporting feature from the
+**Security** tab on GitHub. If that is unavailable, contact the maintainer
+through the contact method listed on their GitHub profile. Do not include
+secrets, credentials, or unnecessary personal data in a report.
 
 Include enough detail to reproduce the issue safely:
 
@@ -39,17 +33,12 @@ For prompt-injection or unsafe-agent-behavior reports, include the
 untrusted input and the resulting behavior, but redact credentials,
 proprietary content, and private project details.
 
-## Response targets
+## Response
 
-We aim to:
-
-1. Acknowledge a report within five business days.
-2. Triage its severity and scope within ten business days.
-3. Keep the reporter informed about remediation or mitigation when
-   disclosure is appropriate.
-
-These are targets rather than guaranteed response times. Timing may depend
-on the availability of a maintainer and the complexity of the report.
+This is a small project maintained by one person in their spare time.
+Reports are acknowledged as soon as practical, usually within a couple of
+weeks, and the reporter is kept informed about remediation when disclosure
+is appropriate. There are no guaranteed response times.
 
 ## Disclosure
 
@@ -60,11 +49,9 @@ want attribution.
 
 ## Scope and exclusions
 
-This policy covers files and release artifacts intentionally tracked in
-this repository. The local `examples/` directory is intentionally ignored
-and is not part of the public release.
+This policy covers the files tracked in this repository.
 
 Do not test systems or services that you do not own or have explicit
-permission to test. Reports based only on unsupported versions, ordinary
-feature requests, content disagreements, or third-party services without
-a demonstrated impact on this repository are outside this policy.
+permission to test. Ordinary feature requests, content disagreements, and
+issues in third-party services without a demonstrated impact on this
+repository are outside this policy.

@@ -9,7 +9,8 @@ defaults.
 - Keep the documents provider-neutral. Do not tie them to one AI tool.
 - Keep `1-director.md` about how the agent works, `2-standards.md` about
   technical defaults, and `3-brief.md` as a blank template.
-- Keep `3-brief.md` free of project-specific content.
+- Keep `3-brief.md` free of project-specific content. Put sample content
+  in `examples/` and keep it fictional.
 - Do not add secrets, private project details, or personal data.
 - Keep precedence consistent: human chat instructions, then the brief,
   then standards, then the director.
